@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on Dezember 05, 2021, at 18:26
+    on Dezember 06, 2021, at 18:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Lukas Stingl\\OneDrive\\Desktop\\EMUB\\food_intake_lastrun.py',
+    originPath='C:\\Users\\Lukas Stingl\\OneDrive\\Desktop\\EMUB\\nourriture_cEEG\\food_intake_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -159,9 +159,9 @@ image = visual.ImageStim(
 # Initialize components for Routine "Speaking_40s"
 Speaking_40sClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    text='Zu Frühlingsbeginn machte man plötzlich eine alarmierende Entdeckung. Schneeball suchte nachts heimlich die Farm auf! Die Tiere waren so beunruhigt, dass sie in ihren Ställen kaum noch Schlaf fanden. Jede Nacht, so hieß es, schleiche er sich im Schutze der Dunkelheit herein und verübe alle möglichen Missetaten. Er stahl das Korn, er stießt die Milchkübel um, er zerbrach die Eier, er zertrampelte die Saatbeete, er knabberte die Rinde der Obstbäume ab. Wenn irgendetwas schiefging, wurde dies in der Regel Schneeball zugeschrieben. War ein Fenster zerbrochen oder Abfluss verstopft, durfte man sicher sein, dass irgendjemand erklärte, Schneeball sei in der Nacht gekommen und habe es getan, und als der Schlüssel zur Futterkammer verloren ging, da war die ganze Farm überzeugt davon, dass Schneeball ihn in den Brunnen geworfen hatte.',
     font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=1.15, ori=0.0, 
+    pos=(0, 0), height=0.05, wrapWidth=1.2, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -269,7 +269,7 @@ text_blank4 = visual.TextStim(win=win, name='text_blank4',
 # Initialize components for Routine "Description_Resting_Eyes_closed"
 Description_Resting_Eyes_closedClock = core.Clock()
 text_7 = visual.TextStim(win=win, name='text_7',
-    text='Close your eyes and try to relax your facial muscles as much as possible until the music stops  (duration: 1 interval of 60 seconds).',
+    text='Close your eyes and try to relax your facial muscles as much as possible until you hear a sound (duration: 1 interval of 60 seconds).',
     font='Open Sans',
     pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -292,15 +292,9 @@ button_6.buttonClock = core.Clock()
 
 # Initialize components for Routine "Resting_eyes_closed"
 Resting_eyes_closedClock = core.Clock()
-sound_1 = sound.Sound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=-1, stereo=True, hamming=True,
+sound_1 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
     name='sound_1')
-sound_1.setVolume(1.0)
-sound_2 = sound.Sound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=-1, stereo=True, hamming=True,
-    name='sound_2')
-sound_2.setVolume(1.0)
-sound_3 = sound.Sound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=-1, stereo=True, hamming=True,
-    name='sound_3')
-sound_3.setVolume(1.0)
+sound_1.setVolume(0.6)
 
 # Initialize components for Routine "blank4"
 blank4Clock = core.Clock()
@@ -360,7 +354,7 @@ text_blank4 = visual.TextStim(win=win, name='text_blank4',
 # Initialize components for Routine "Description_Eating_SF"
 Description_Eating_SFClock = core.Clock()
 text_6 = visual.TextStim(win=win, name='text_6',
-    text='Please eat nuts in the first and second interval and bread in the second and fourth interval. (duration: 4 intervals of 40 seconds each).\n',
+    text='Please eat nuts in the first and second interval and bread in the second and fourth interval (duration: 4 intervals of 40 seconds each).\n',
     font='Open Sans',
     pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -386,8 +380,8 @@ Eating_SF_nutsClock = core.Clock()
 image_6 = visual.ImageStim(
     win=win,
     name='image_6', 
-    image=None, mask=None,
-    ori=0.0, pos=(0, 0), size=(0.5, 0.5),
+    image='Bilder/nuts.jpg', mask=None,
+    ori=0.0, pos=(0, 0), size=(0.5, 0.329),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -407,8 +401,8 @@ Eating_SF_nutsClock = core.Clock()
 image_6 = visual.ImageStim(
     win=win,
     name='image_6', 
-    image=None, mask=None,
-    ori=0.0, pos=(0, 0), size=(0.5, 0.5),
+    image='Bilder/nuts.jpg', mask=None,
+    ori=0.0, pos=(0, 0), size=(0.5, 0.329),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -774,7 +768,7 @@ for thisTrial in trials:
     
     # ------Prepare to start Routine "Speaking_40s"-------
     continueRoutine = True
-    routineTimer.add(1.000000)
+    routineTimer.add(5.000000)
     # update component parameters for each repeat
     # keep track of which components have finished
     Speaking_40sComponents = [text]
@@ -810,7 +804,7 @@ for thisTrial in trials:
             text.setAutoDraw(True)
         if text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text.tStartRefresh + 1-frameTolerance:
+            if tThisFlipGlobal > text.tStartRefresh + 5-frameTolerance:
                 # keep track of stop time/frame for later
                 text.tStop = t  # not accounting for scr refresh
                 text.frameNStop = frameN  # exact frame index
@@ -1269,7 +1263,7 @@ routineTimer.reset()
 
 # ------Prepare to start Routine "Resting"-------
 continueRoutine = True
-routineTimer.add(1.000000)
+routineTimer.add(4.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 RestingComponents = [image_3]
@@ -1305,7 +1299,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_3.setAutoDraw(True)
     if image_3.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_3.tStartRefresh + 1.0-frameTolerance:
+        if tThisFlipGlobal > image_3.tStartRefresh + 4-frameTolerance:
             # keep track of stop time/frame for later
             image_3.tStop = t  # not accounting for scr refresh
             image_3.frameNStop = frameN  # exact frame index
@@ -1503,16 +1497,12 @@ routineTimer.reset()
 
 # ------Prepare to start Routine "Resting_eyes_closed"-------
 continueRoutine = True
-routineTimer.add(40.000000)
+routineTimer.add(41.000000)
 # update component parameters for each repeat
-sound_1.setSound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=16, hamming=True)
-sound_1.setVolume(1.0, log=False)
-sound_2.setSound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=16, hamming=True)
-sound_2.setVolume(1.0, log=False)
-sound_3.setSound('Sounds/mixkit-tick-tock-clock-timer-1045.wav', secs=8, hamming=True)
-sound_3.setVolume(1.0, log=False)
+sound_1.setSound('A', secs=1.0, hamming=True)
+sound_1.setVolume(0.6, log=False)
 # keep track of which components have finished
-Resting_eyes_closedComponents = [sound_1, sound_2, sound_3]
+Resting_eyes_closedComponents = [sound_1]
 for thisComponent in Resting_eyes_closedComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1535,7 +1525,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     # start/stop sound_1
-    if sound_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    if sound_1.status == NOT_STARTED and tThisFlip >= 40-frameTolerance:
         # keep track of start time/frame for later
         sound_1.frameNStart = frameN  # exact frame index
         sound_1.tStart = t  # local t and not account for scr refresh
@@ -1543,42 +1533,12 @@ while continueRoutine and routineTimer.getTime() > 0:
         sound_1.play(when=win)  # sync with win flip
     if sound_1.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sound_1.tStartRefresh + 16-frameTolerance:
+        if tThisFlipGlobal > sound_1.tStartRefresh + 1.0-frameTolerance:
             # keep track of stop time/frame for later
             sound_1.tStop = t  # not accounting for scr refresh
             sound_1.frameNStop = frameN  # exact frame index
             win.timeOnFlip(sound_1, 'tStopRefresh')  # time at next scr refresh
             sound_1.stop()
-    # start/stop sound_2
-    if sound_2.status == NOT_STARTED and tThisFlip >= 16-frameTolerance:
-        # keep track of start time/frame for later
-        sound_2.frameNStart = frameN  # exact frame index
-        sound_2.tStart = t  # local t and not account for scr refresh
-        sound_2.tStartRefresh = tThisFlipGlobal  # on global time
-        sound_2.play(when=win)  # sync with win flip
-    if sound_2.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sound_2.tStartRefresh + 16-frameTolerance:
-            # keep track of stop time/frame for later
-            sound_2.tStop = t  # not accounting for scr refresh
-            sound_2.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(sound_2, 'tStopRefresh')  # time at next scr refresh
-            sound_2.stop()
-    # start/stop sound_3
-    if sound_3.status == NOT_STARTED and tThisFlip >= 32-frameTolerance:
-        # keep track of start time/frame for later
-        sound_3.frameNStart = frameN  # exact frame index
-        sound_3.tStart = t  # local t and not account for scr refresh
-        sound_3.tStartRefresh = tThisFlipGlobal  # on global time
-        sound_3.play(when=win)  # sync with win flip
-    if sound_3.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sound_3.tStartRefresh + 8-frameTolerance:
-            # keep track of stop time/frame for later
-            sound_3.tStop = t  # not accounting for scr refresh
-            sound_3.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(sound_3, 'tStopRefresh')  # time at next scr refresh
-            sound_3.stop()
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1604,12 +1564,6 @@ for thisComponent in Resting_eyes_closedComponents:
 sound_1.stop()  # ensure sound has stopped at end of routine
 thisExp.addData('sound_1.started', sound_1.tStartRefresh)
 thisExp.addData('sound_1.stopped', sound_1.tStopRefresh)
-sound_2.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_2.started', sound_2.tStartRefresh)
-thisExp.addData('sound_2.stopped', sound_2.tStopRefresh)
-sound_3.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_3.started', sound_3.tStartRefresh)
-thisExp.addData('sound_3.stopped', sound_3.tStopRefresh)
 
 # ------Prepare to start Routine "blank4"-------
 continueRoutine = True
