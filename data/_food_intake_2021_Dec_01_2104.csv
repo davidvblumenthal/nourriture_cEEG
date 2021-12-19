@@ -1,8 +1,0 @@
-﻿trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials_2.thisRepN,trials_2.thisTrialN,trials_2.thisN,trials_2.thisIndex,trials_3.thisRepN,trials_3.thisTrialN,trials_3.thisN,trials_3.thisIndex,image_2.started,image_2.stopped,text_3.started,text_3.stopped,button_3.started,button_3.stopped,button_3.numClicks,button_3.timesOn,button_3.timesOff,image_3.started,image_3.stopped,text_4.started,text_4.stopped,button_4.started,button_4.stopped,button_4.numClicks,button_4.timesOn,button_4.timesOff,image_4.started,image_4.stopped,participant,session,date,expName,psychopyVersion,frameRate,
-0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-1,0,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-,,,,0,0,0,0,,,,,14.920571600086987,None,,,,,,,,,,,,,,,,,,,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-,,,,1,0,1,0,,,,,15.919193000067025,None,,,,,,,,,,,,,,,,,,,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-,,,,2,0,2,0,,,,,16.92623880004976,None,,,,,,,,,,,,,,,,,,,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-,,,,,,,,0,0,0,0,,,17.933307900093496,None,18.927512400085106,None,1,[8.2150298000779],[8.21503320010379],27.14405230002012,None,28.148232700070366,None,29.135031100013293,None,1,[0.40966630005277693],[0.4096706999698654],29.55233960004989,None,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
-,,,,,,,,1,0,1,0,,,,,,,,,,,,,,,,,,,30.558101700036786,None,,001,2021_Dec_01_2104,food_intake,2021.2.3,140.91552826845833,
