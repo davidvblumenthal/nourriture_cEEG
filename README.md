@@ -35,7 +35,7 @@ This approach can be potentially useful for automatic and objective monitoring o
 
 **Break between activities**: 15 seconds
 
-![Picture 1.jpg](Design%20Experiment%20-%20Data%20Collection%20c4ab3cf472694dfcb2f7f4535e1c3fc0/Picture_1.jpg)
+![Picture 1.jpg](img_resources/Picture_1.jpg)
 
 ---
 
