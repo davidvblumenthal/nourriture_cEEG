@@ -130,3 +130,5 @@ dmypy.json
 
 # MAC specific
 .DS_Store
+.ipynb_checkpoints
+.ipynb_checkpoints/
