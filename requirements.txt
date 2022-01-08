@@ -4,3 +4,4 @@ matplotlib
 scikit-learn
 scipy
 mne
+pyprep
