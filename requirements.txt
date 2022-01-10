@@ -6,4 +6,6 @@ scipy
 mne
 pyprep
 eeglib
+mne_features
 seaborn
+imbalanced-learn
