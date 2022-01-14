@@ -11,6 +11,7 @@ import mne
 import mne_features.univariate as mf
 import eeglib.features as ef
 from sklearn.decomposition import FastICA
+from sklearn.preprocessing import StandardScaler
 
 def clean_signals(raw_signals):
     # Load EEG data into MNE Python for preprocessing
@@ -107,11 +108,16 @@ takes takes number of components and list of numpy arrays containing windows of 
 def calculate_ica(components, splits):
     return_list = list()
 
+    
     for epoch in splits:
+        
         #print(epoch.shape)
         epoch_trans = epoch.transpose()
+        #scaling data
+        scaler = StandardScaler()
+        epoch_trans = scaler.fit_transform(epoch_trans)
         #print(epoch.shape)
-        transformer = FastICA(n_components = components, random_state = 42)
+        transformer = FastICA(n_components = components, max_iter = 1000, random_state = 42)
 
         splits_ica = transformer.fit_transform(epoch_trans)
         splits_ica = splits_ica.transpose()
