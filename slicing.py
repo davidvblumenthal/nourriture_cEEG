@@ -98,3 +98,14 @@ def slice_data(routines, sensor_data):
             routines_data_dict[key][i].drop(" Timestamp (Formatted)", inplace=True, axis=1)
     return routines_data_dict
 
+def append_timestamps(cleaned_objects, org_dfs):
+    list_dfs_with_timestamps = []
+
+    for df, old_df in zip(cleaned_objects, org_dfs):
+        temp = pd.DataFrame(df.get_data())
+        temp = temp.transpose()
+        temp[" Timestamp (Formatted)"] = old_df[" Timestamp (Formatted)"]
+        #append
+        list_dfs_with_timestamps.append(temp)
+
+    return list_dfs_with_timestamps

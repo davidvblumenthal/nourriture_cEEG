@@ -8,6 +8,7 @@ import os
 
 import matplotlib as plt
 import mne
+from mne.preprocessing import ICA
 import mne_features.univariate as mf
 import eeglib.features as ef
 from sklearn.decomposition import FastICA
@@ -46,6 +47,32 @@ def clean_signals(raw_signals):
     raw = raw.interpolate_bads()
 
     return raw
+
+def ica_whole_signal(cleaned_signals = list(), components = int):
+    with_icacomponents = list()
+    for signal in cleaned_signals:
+        #compute ica components
+        ica = ICA(n_components = components)
+        ica.fit(signal)
+        #extract computed components
+        clc_ica = ica.get_sources(signal)
+        #get numpy arrays to connect both orginal channels and computed ic
+        org_signal = signal.get_data()
+        ic = clc_ica.get_data()
+        #append calculated channels to input array
+        concat_array = np.concatenate((org_signal, ic), axis=0)
+        #define channel names to construct mne object
+        ch_names = ['L1', 'L2', 'L3', 'L4', 'L7', 'L8', 'L9', 'L10', 'R1', 'R2', 'R3', 'R5', 'R7', 'R8', 'R9',
+                    'R10', 'IC1', 'IC2', 'IC3']
+        info = mne.create_info(ch_names, 125, ch_types='eeg')
+        #create mne object
+        raw = mne.io.RawArray(concat_array, info)
+        #append to list
+        with_icacomponents.append(raw)
+
+    return with_icacomponents
+
+
 
 ''' 
 function that splits array into given "size" subarrays 
