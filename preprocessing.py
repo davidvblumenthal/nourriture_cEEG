@@ -23,7 +23,7 @@ def clean_signals(raw_signals):
     raw = mne.io.RawArray(np.array(raw_signals.drop('time', axis = 1)).transpose(), info)
 
     # High-Pass Filter & Plot for visual inspection
-    raw.copy().filter(l_freq = 1, h_freq = 62.49).plot(scalings=dict(eeg=100))
+    raw.copy().filter(l_freq = 1, h_freq = 62.0).plot(scalings=dict(eeg=100))
 
     # Load custom montage (for cEEGrids) - these are the coordinates of the electrodes on the head
     ceegrid_montage = mne.channels.read_custom_montage('ceegrid_sph.txt')
@@ -127,6 +127,17 @@ def calculate_featuresF1(splits):
 
 
     return features_one_routine
+
+'''
+Feature from cited paper - implement???? @ToD0
+- Differential Entropy (DE): computed as a metric for measuring the predictability of signal X, whose values have a probability density function similar to a Gaussian distribution, N(μ, σ2), as is the case for EEG signals. It can be defined as h(X)=12log(2πeσ2)
+• Amplitude Envelope (AE): computed using the Hilbert transform (Boashash, 1992).
+• Petrosian Fractal Dimension (PFD): defined as PFD = log(N)/(log(N) + log(N/(N + 0.4Nδ))), where N is the series length, and Nδ is the number of sign changes in the signal derivative (Petrosian, 1995).
+• Higuchi Fractal Dimension (HFD): Higuchi's algorithm can be used to quantify the complexity and self-similarity of a signal (Accardo et al., 1997).
+• Fisher Information (FI): Fisher information is a way of measuring the amount of information that an observable random variable X carries about an unknown parameter θ of a distribution that models X (Fisher, 1925).
+'''
+
+
 
 '''
 function calculates Individual Components of signals
