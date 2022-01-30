@@ -63,7 +63,7 @@ def get_routine_times(df):
     soup = pd.DataFrame(data = dict(itertools.islice(data.items(), 8, 10)))
     nuts = pd.DataFrame(data = dict(itertools.islice(data.items(), 10, 12)))
     sandwich = pd.DataFrame(dict(itertools.islice(data.items(), 12, 14)))
-    routines = {"speaking":speaking,"yawning": yawning,"resting_open": resting_open,"resting_closed": resting_closed, "soup":soup, "nuts": nuts,"sandwich": sandwich}
+    routines = {"speaking": speaking, "yawning": yawning,"resting_open": resting_open,"resting_closed": resting_closed, "soup": soup, "nuts": nuts, "sandwich": sandwich}
     for activities in routines.values(): 
         TF_TS_Start = []
         TF_TS_End = []

@@ -14,6 +14,21 @@ import eeglib.features as ef
 from sklearn.decomposition import FastICA
 from sklearn.preprocessing import StandardScaler
 
+def create_and_plot_raw_signals(raw_signals):
+    # Load EEG data into MNE Python for preprocessing
+    # Create MNE Python object
+    fs = 125 # Sampling frequency of the OpenBCI recording
+    ch_names = raw_signals.drop('time', axis=1).columns.values.tolist()
+    info = mne.create_info(ch_names, fs, ch_types='eeg')
+    raw = mne.io.RawArray(np.array(raw_signals.drop('time', axis = 1)).transpose(), info)
+
+    raw.info['bads'] = []
+    raw = raw.interpolate_bads()
+    #plot
+    raw.plot()
+
+    return raw
+
 def clean_signals(raw_signals):
     # Load EEG data into MNE Python for preprocessing
     # Create MNE Python object
