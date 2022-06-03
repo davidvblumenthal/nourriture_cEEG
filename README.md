@@ -1,3 +1,5 @@
+## Summary
+This study presents an approach to enhance the objective monitoring of food intake using cEEGrids. A 3D-printed around-the-ear electrode array was used to acquire data of participants eating different types of food as well as baseline activities. Signals are processed using different algorithms to create feature sets and to recognize patterns of the different featured activities. The results showed that Random Forests performed best on our data set with average accuracy and f1-score of 85.7% and 85.9%. This approach can be useful to automate and objectively measure ingestive behavior. An imaginable application would be in the treatment of overweight or anorexic patients. It could also be applicable to support Alzheimer’s patients, as this disease is also often accompanied by a lack of food and fluid intake.
 
 ## Motivation & Research Question
 
